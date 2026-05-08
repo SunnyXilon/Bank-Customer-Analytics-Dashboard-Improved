@@ -45,3 +45,6 @@ A modern, interactive web application built with Python, Dash, and Plotly to vis
 
 ## 📊 Data Source
 The data used in this dashboard is purely synthetic, generated using `NumPy` and `Pandas` for demonstration and portfolio purposes. It includes features like customer age, geographic location (Indian States), account types, and revenue generated.
+
+## It's live go ahead and check it:
+https://bank-customer-analytics-dashboard.onrender.com/
