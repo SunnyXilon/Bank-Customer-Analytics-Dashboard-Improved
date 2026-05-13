@@ -2,6 +2,9 @@ __pycache__/
 *.pyc
 venv/
 env/
+.venv/
 .env
+dash.log
+dash.err.log
 .DS_Store
 .ipynb_checkpoints/

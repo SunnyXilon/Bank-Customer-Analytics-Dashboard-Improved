@@ -1,0 +1,80 @@
+body {
+    background: #0b0f14;
+}
+
+.dashboard-shell {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.dashboard-title {
+    line-height: 1.15;
+}
+
+.filter-label {
+    font-weight: 600;
+    color: #f8f9fa;
+}
+
+.kpi-click-target {
+    cursor: pointer;
+}
+
+.kpi-card {
+    border: 0;
+    border-radius: 8px;
+    min-height: 126px;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.kpi-click-target:hover .kpi-card {
+    transform: translateY(-2px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.28);
+}
+
+.kpi-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    min-height: 126px;
+}
+
+.kpi-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.kpi-value {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.panel-card {
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.panel-header {
+    align-items: center;
+    display: flex;
+    min-height: 58px;
+}
+
+.chart-body {
+    min-height: 420px;
+}
+
+.table-card-body {
+    padding: 1rem;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
