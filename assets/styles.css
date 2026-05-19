@@ -201,6 +201,20 @@ body {
     padding: 0 4px 10px;
 }
 
+.age-range-slider .dash-range-slider-input,
+.age-range-slider .dash-range-slider-min-input,
+.age-range-slider .dash-range-slider-max-input {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    visibility: hidden !important;
+    width: 0 !important;
+}
+
 .age-range-slider .rc-slider-mark {
     left: 4px !important;
     right: 4px !important;
