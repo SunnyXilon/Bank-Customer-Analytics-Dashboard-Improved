@@ -88,7 +88,16 @@ def create_layout():
             dbc.Col([
                 html.Label("Age Range", className="filter-label mb-2"),
                 html.Div([
-                    html.Div("18", id="age-min-display", className="age-value-box"),
+                    dbc.Input(
+                        id="age-min-input",
+                        type="number",
+                        min=18,
+                        max=70,
+                        step=1,
+                        value=18,
+                        className="age-value-input",
+                        debounce=False
+                    ),
                     html.Div(
                         dcc.RangeSlider(
                             id="age-slider",
@@ -101,13 +110,21 @@ def create_layout():
                                 50: {"label": "50", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
                                 70: {"label": "70", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
                             },
-                            tooltip={"placement": "bottom", "always_visible": False},
                             allowCross=False,
                             className="age-range-slider"
                         ),
                         className="age-slider-wrap"
                     ),
-                    html.Div("70", id="age-max-display", className="age-value-box")
+                    dbc.Input(
+                        id="age-max-input",
+                        type="number",
+                        min=18,
+                        max=70,
+                        step=1,
+                        value=70,
+                        className="age-value-input",
+                        debounce=False
+                    )
                 ], className="age-range-control")
             ], xs=12, md=8, xl=4)
         ], className="filter-band g-3 align-items-end mb-4"),

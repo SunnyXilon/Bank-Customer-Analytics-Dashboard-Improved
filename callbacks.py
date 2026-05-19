@@ -169,14 +169,50 @@ def _build_transaction_table(transactions):
 def register_callbacks(app):
     @app.callback(
         [
-            Output("age-min-display", "children"),
-            Output("age-max-display", "children"),
+            Output("age-slider", "value"),
+            Output("age-min-input", "value"),
+            Output("age-max-input", "value"),
         ],
-        Input("age-slider", "value")
+        [
+            Input("age-slider", "value"),
+            Input("age-min-input", "value"),
+            Input("age-max-input", "value"),
+        ]
     )
-    def update_age_range_display(age_range):
+    def sync_age_range_controls(age_range, min_input, max_input):
         min_age, max_age = age_range or [18, 70]
-        return str(min_age), str(max_age)
+        triggered_id = ctx.triggered_id
+
+        def clamp_age(value, fallback):
+            if value in [None, ""]:
+                return None
+            try:
+                return max(18, min(70, int(value)))
+            except (TypeError, ValueError):
+                return fallback
+
+        if triggered_id == "age-slider" or triggered_id is None:
+            return [min_age, max_age], min_age, max_age
+
+        if triggered_id == "age-min-input":
+            typed_min = clamp_age(min_input, min_age)
+            if typed_min is None:
+                raise PreventUpdate
+            typed_max = clamp_age(max_input, max_age) or max_age
+            if typed_min > typed_max:
+                typed_max = typed_min
+            return [typed_min, typed_max], typed_min, typed_max
+
+        if triggered_id == "age-max-input":
+            typed_max = clamp_age(max_input, max_age)
+            if typed_max is None:
+                raise PreventUpdate
+            typed_min = clamp_age(min_input, min_age) or min_age
+            if typed_max < typed_min:
+                typed_min = typed_max
+            return [typed_min, typed_max], typed_min, typed_max
+
+        raise PreventUpdate
 
     @app.callback(
         [

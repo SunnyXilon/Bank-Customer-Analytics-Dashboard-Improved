@@ -160,19 +160,30 @@ body {
     grid-template-columns: 44px minmax(180px, 1fr) 44px;
 }
 
-.age-value-box {
-    align-items: center;
+.age-value-input {
     background: #18232e;
     border: 1px solid #4cc9f0;
     border-radius: 6px;
     color: #ffffff;
-    display: inline-flex;
     font-size: 0.95rem;
     font-weight: 800;
     height: 42px;
-    justify-content: center;
     line-height: 1;
     min-width: 44px;
+    padding: 0;
+    text-align: center;
+}
+
+.age-value-input:focus {
+    background: #0b1117;
+    border-color: #80ed99;
+    color: #ffffff;
+    box-shadow: 0 0 0 0.15rem rgba(128, 237, 153, 0.2);
+}
+
+.age-value-input::-webkit-outer-spin-button,
+.age-value-input::-webkit-inner-spin-button {
+    margin: 0;
 }
 
 .age-slider-wrap {
@@ -219,6 +230,12 @@ body {
 .rc-slider-dot {
     background-color: #0b1117;
     border-color: #4cc9f0;
+}
+
+.rc-slider-tooltip,
+.rc-slider-tooltip-content,
+.rc-slider-tooltip-inner {
+    display: none !important;
 }
 
 .kpi-click-target {
