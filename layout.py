@@ -58,7 +58,8 @@ def create_layout():
                     id="state-filter",
                     options=[{"label": i, "value": i} for i in STATES],
                     multi=True,
-                    placeholder="Select states"
+                    placeholder="Select states",
+                    className="filter-dropdown"
                 )
             ], xs=12, md=6, xl=3),
 
@@ -68,7 +69,8 @@ def create_layout():
                     id="account-filter",
                     options=[{"label": i, "value": i} for i in ACCOUNT_TYPES],
                     multi=True,
-                    placeholder="Select account types"
+                    placeholder="Select account types",
+                    className="filter-dropdown"
                 )
             ], xs=12, md=6, xl=3),
 
@@ -78,7 +80,8 @@ def create_layout():
                     id="gender-filter",
                     options=[{"label": i, "value": i} for i in GENDERS],
                     multi=True,
-                    placeholder="Select gender"
+                    placeholder="Select gender",
+                    className="filter-dropdown"
                 )
             ], xs=12, md=4, xl=2),
 
@@ -89,7 +92,13 @@ def create_layout():
                     min=18,
                     max=70,
                     value=[18, 70],
-                    marks={18: "18", 30: "30", 50: "50", 70: "70"}
+                    marks={
+                        18: {"label": "18", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
+                        30: {"label": "30", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
+                        50: {"label": "50", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
+                        70: {"label": "70", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
+                    },
+                    className="age-range-slider"
                 )
             ], xs=12, md=8, xl=4)
         ], className="filter-band g-3 align-items-end mb-4"),

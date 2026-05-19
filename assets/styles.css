@@ -70,6 +70,63 @@ body {
     color: #f8f9fa !important;
 }
 
+.filter-dropdown,
+.filter-dropdown .Select,
+.filter-dropdown .Select-control,
+.filter-dropdown .Select-multi-value-wrapper {
+    background-color: #0b1117 !important;
+    color: #ffffff !important;
+}
+
+.filter-dropdown .Select-control {
+    border: 1px solid #30445a !important;
+    border-radius: 6px !important;
+    min-height: 42px;
+}
+
+.filter-dropdown .Select-placeholder {
+    color: #8fa3b8 !important;
+}
+
+.filter-dropdown .Select-input,
+.filter-dropdown .Select-input input {
+    color: #ffffff !important;
+}
+
+.filter-dropdown .Select-clear-zone,
+.filter-dropdown .Select-arrow-zone {
+    color: #cbd5e1 !important;
+}
+
+.filter-dropdown .Select-menu-outer,
+.filter-dropdown .VirtualizedSelectOption {
+    background-color: #101820 !important;
+    color: #ffffff !important;
+}
+
+.filter-dropdown .VirtualizedSelectFocusedOption {
+    background-color: #263544 !important;
+    color: #ffffff !important;
+}
+
+.filter-dropdown .Select-value {
+    background-color: #18232e !important;
+    border: 1px solid #4cc9f0 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    line-height: 26px !important;
+}
+
+.filter-dropdown .Select-value-label {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.filter-dropdown .Select-value-icon {
+    border-right: 1px solid #30445a !important;
+    color: #cbd5e1 !important;
+}
+
 .Select--multi .Select-value {
     background-color: #18232e !important;
     border: 1px solid #4cc9f0 !important;
@@ -94,6 +151,16 @@ body {
 
 .rc-slider {
     margin: 0 14px 28px;
+}
+
+.age-range-slider {
+    padding: 0 18px 10px;
+}
+
+.age-range-slider .rc-slider-mark {
+    left: 18px !important;
+    right: 18px !important;
+    width: auto !important;
 }
 
 .rc-slider-mark-text,
