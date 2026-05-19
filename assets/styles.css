@@ -153,13 +153,39 @@ body {
     margin: 0 14px 28px;
 }
 
+.age-range-control {
+    align-items: flex-start;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 44px minmax(180px, 1fr) 44px;
+}
+
+.age-value-box {
+    align-items: center;
+    background: #18232e;
+    border: 1px solid #4cc9f0;
+    border-radius: 6px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 0.95rem;
+    font-weight: 800;
+    height: 42px;
+    justify-content: center;
+    line-height: 1;
+    min-width: 44px;
+}
+
+.age-slider-wrap {
+    padding-top: 7px;
+}
+
 .age-range-slider {
-    padding: 0 18px 10px;
+    padding: 0 4px 10px;
 }
 
 .age-range-slider .rc-slider-mark {
-    left: 18px !important;
-    right: 18px !important;
+    left: 4px !important;
+    right: 4px !important;
     width: auto !important;
 }
 

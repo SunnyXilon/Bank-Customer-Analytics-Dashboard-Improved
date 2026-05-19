@@ -87,19 +87,28 @@ def create_layout():
 
             dbc.Col([
                 html.Label("Age Range", className="filter-label mb-2"),
-                dcc.RangeSlider(
-                    id="age-slider",
-                    min=18,
-                    max=70,
-                    value=[18, 70],
-                    marks={
-                        18: {"label": "18", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
-                        30: {"label": "30", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
-                        50: {"label": "50", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
-                        70: {"label": "70", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
-                    },
-                    className="age-range-slider"
-                )
+                html.Div([
+                    html.Div("18", id="age-min-display", className="age-value-box"),
+                    html.Div(
+                        dcc.RangeSlider(
+                            id="age-slider",
+                            min=18,
+                            max=70,
+                            value=[18, 70],
+                            marks={
+                                18: {"label": "18", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
+                                30: {"label": "30", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
+                                50: {"label": "50", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
+                                70: {"label": "70", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
+                            },
+                            tooltip={"placement": "bottom", "always_visible": False},
+                            allowCross=False,
+                            className="age-range-slider"
+                        ),
+                        className="age-slider-wrap"
+                    ),
+                    html.Div("70", id="age-max-display", className="age-value-box")
+                ], className="age-range-control")
             ], xs=12, md=8, xl=4)
         ], className="filter-band g-3 align-items-end mb-4"),
 

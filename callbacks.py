@@ -169,6 +169,17 @@ def _build_transaction_table(transactions):
 def register_callbacks(app):
     @app.callback(
         [
+            Output("age-min-display", "children"),
+            Output("age-max-display", "children"),
+        ],
+        Input("age-slider", "value")
+    )
+    def update_age_range_display(age_range):
+        min_age, max_age = age_range or [18, 70]
+        return str(min_age), str(max_age)
+
+    @app.callback(
+        [
             Output("customer-kpi", "children"),
             Output("deposit-kpi", "children"),
             Output("loan-kpi", "children"),
