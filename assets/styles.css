@@ -239,6 +239,11 @@ body {
     border-color: #4cc9f0;
 }
 
+.rc-tooltip,
+.rc-tooltip-content,
+.rc-tooltip-inner,
+.rc-tooltip-arrow,
+.rc-tooltip *,
 .rc-slider-tooltip,
 .rc-slider-tooltip-content,
 .rc-slider-tooltip-inner,
