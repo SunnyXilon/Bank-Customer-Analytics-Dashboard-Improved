@@ -1,50 +1,43 @@
-# Bank Customer Analytics Dashboard 🏦
+# Bank Customer Analytics Dashboard
 
-A modern, interactive web application built with Python, Dash, and Plotly to visualize and analyze synthetic bank customer data.
+A Dash and Plotly banking analytics dashboard with CSV-backed customer and transaction data.
 
-## ✨ Features
+## Features
 
-- **Interactive Filtering**: Filter data in real-time by State (Indian states), Account Type, Gender, and Age Range.
-- **Dynamic KPI Cards**: Instantly view total customers, deposits, loan amounts, revenue, and churn rate based on your current filters.
-- **Data Visualizations**: 
-  - Customer Growth Trends (Line Chart)
-  - Account Type Segmentation (Pie Chart)
-  - Revenue breakdown (Bar Chart)
-  - Age Distribution (Histogram)
-- **Interactive Data Explorer**: A fully paginated data table containing specific customer details, complete with a dedicated `customer_id` search bar for quick lookups.
-- **Modern UI**: Built with Dash Bootstrap Components using the sleek, dark `CYBORG` theme, featuring shadow depth and rounded cards.
+- Customer, deposit, loan, revenue, churn, active, risk, and high-value KPI cards.
+- Banking insights for risk score, high-value customers, loan-to-income ratio, churn risk segments, average revenue per customer, and deposit-to-loan ratio.
+- Customer growth, account segmentation, revenue, age, risk, branch, product usage, and transaction trend charts.
+- Full customer table with search, sorting, native filtering, CSV export, Indian currency formatting, and row highlighting.
+- Transaction table with branch, city, channel, type, amount, and customer details.
+- Realistic generated CSV data with names, cities, branches, occupations, product usage, and transaction records.
 
-## 🛠️ Technologies Used
+## Data
 
-- **Python**: Core programming language
-- **Pandas & NumPy**: Data generation and manipulation
-- **Dash**: Web framework for building the analytical app
-- **Plotly Express**: Interactive chart generation
-- **Dash Bootstrap Components**: Responsive grid layout and UI styling
+The app stores generated source data in:
 
-## 🚀 How to Run Locally
+- `data/customers.csv`
+- `data/transactions.csv`
 
-1. **Clone the repository** (if you haven't already):
-   ```bash
-   git clone <your-repository-url>
-   cd banking
-   ```
+If those files are missing or outdated, the app regenerates them automatically.
 
-2. **Install the required dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Run Locally
 
-3. **Run the application**:
-   ```bash
-   python app.py
-   ```
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
-4. **View the Dashboard**:
-   Open your web browser and navigate to `http://127.0.0.1:8050/`
+Open:
 
-## 📊 Data Source
-The data used in this dashboard is purely synthetic, generated using `NumPy` and `Pandas` for demonstration and portfolio purposes. It includes features like customer age, geographic location (Indian States), account types, and revenue generated.
+```text
+http://127.0.0.1:8052/
+```
 
-## It's live go ahead and check it:
-https://bank-customer-analytics-dashboard.onrender.com/
+## Stack
+
+- Python
+- Dash
+- Plotly
+- Pandas
+- NumPy
+- Dash Bootstrap Components

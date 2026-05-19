@@ -1,19 +1,73 @@
 body {
-    background: #0b0f14;
+    background: #0b1117;
+    color: #f8f9fa;
 }
 
 .dashboard-shell {
-    max-width: 1500px;
+    max-width: 1560px;
     margin: 0 auto;
+}
+
+.page-heading {
+    border-bottom: 1px solid #263544;
+    padding-bottom: 1.25rem;
+}
+
+.eyebrow {
+    color: #80ed99;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
 
 .dashboard-title {
     line-height: 1.15;
 }
 
+.dashboard-subtitle,
+.insight-detail,
+.dashboard-footer {
+    color: #cbd5e1;
+}
+
+.filter-band {
+    background: #101820;
+    border: 1px solid #263544;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
 .filter-label {
     font-weight: 600;
     color: #f8f9fa;
+}
+
+.Select-control,
+.Select-menu-outer,
+.Select-value,
+.Select-placeholder {
+    background-color: #0b1117 !important;
+    border-color: #30445a !important;
+    color: #f8f9fa !important;
+}
+
+.Select-menu-outer {
+    border: 1px solid #30445a !important;
+}
+
+.Select-option {
+    background-color: #101820 !important;
+    color: #f8f9fa !important;
+}
+
+.Select-option.is-focused {
+    background-color: #18232e !important;
+}
+
+.Select-value-label,
+.Select-input > input {
+    color: #f8f9fa !important;
 }
 
 .kpi-click-target {
@@ -23,25 +77,36 @@ body {
 .kpi-card {
     border: 0;
     border-radius: 8px;
-    min-height: 126px;
+    min-height: 132px;
     transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
 .kpi-click-target:hover .kpi-card {
     transform: translateY(-2px);
-    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.28);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.34);
 }
 
 .kpi-card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.35rem;
-    min-height: 126px;
+    justify-content: space-between;
+    gap: 0.4rem;
+    min-height: 132px;
+}
+
+.kpi-card-top {
+    align-items: center;
+    display: flex;
+    gap: 0.55rem;
+}
+
+.kpi-icon {
+    font-size: 1.15rem;
+    opacity: 0.92;
 }
 
 .kpi-title {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0;
     margin: 0;
@@ -49,20 +114,74 @@ body {
 }
 
 .kpi-value {
-    font-size: 1.2rem;
-    line-height: 1.25;
+    font-size: 1.28rem;
+    line-height: 1.22;
     margin: 0;
     overflow-wrap: anywhere;
 }
 
+.kpi-trend {
+    align-items: center;
+    display: inline-flex;
+    font-size: 0.78rem;
+    font-weight: 700;
+    opacity: 0.94;
+}
+
+.insight-card,
 .panel-card {
-    border: 0;
+    background: #101820;
+    border: 1px solid #263544;
     border-radius: 8px;
     overflow: hidden;
 }
 
+.insight-card {
+    min-height: 142px;
+}
+
+.insight-content {
+    align-items: flex-start;
+    display: flex;
+    gap: 0.9rem;
+}
+
+.insight-icon {
+    background: #18232e;
+    border-radius: 8px;
+    display: inline-flex;
+    font-size: 1.45rem;
+    padding: 0.65rem;
+}
+
+.insight-title {
+    color: #cbd5e1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 0.35rem;
+    text-transform: uppercase;
+}
+
+.insight-value {
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.35rem;
+}
+
+.insight-detail {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin: 0;
+}
+
 .panel-header {
     align-items: center;
+    background: #18232e;
+    border-bottom: 1px solid #263544;
+    color: #ffffff;
     display: flex;
     min-height: 58px;
 }
@@ -75,6 +194,47 @@ body {
     padding: 1rem;
 }
 
+.form-control,
+.form-control-sm {
+    background: #0b1117;
+    border-color: #30445a;
+    color: #f8f9fa;
+}
+
+.form-control:focus,
+.form-control-sm:focus {
+    background: #0b1117;
+    border-color: #4cc9f0;
+    color: #ffffff;
+    box-shadow: 0 0 0 0.15rem rgba(76, 201, 240, 0.22);
+}
+
+.dash-table-container .previous-next-container button,
+.dash-table-container .page-number {
+    background: #18232e !important;
+    border-color: #30445a !important;
+    color: #f8f9fa !important;
+}
+
 .modal-content {
+    background: #101820;
+    border: 1px solid #263544;
     border-radius: 8px;
+    color: #f8f9fa;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #263544;
+}
+
+.dashboard-footer {
+    align-items: center;
+    border-top: 1px solid #263544;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    gap: 0.75rem 1.5rem;
+    justify-content: space-between;
+    padding: 1.25rem 0 0;
 }
