@@ -110,6 +110,11 @@ def create_layout():
                                 50: {"label": "50", "style": {"color": "#cbd5e1", "fontWeight": "700"}},
                                 70: {"label": "70", "style": {"color": "#f8f9fa", "fontWeight": "700"}},
                             },
+                            tooltip={
+                                "always_visible": False,
+                                "placement": "bottom",
+                                "style": {"display": "none"},
+                            },
                             allowCross=False,
                             className="age-range-slider"
                         ),

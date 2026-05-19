@@ -183,7 +183,14 @@ body {
 
 .age-value-input::-webkit-outer-spin-button,
 .age-value-input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
     margin: 0;
+}
+
+.age-value-input {
+    appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 .age-slider-wrap {
@@ -234,8 +241,13 @@ body {
 
 .rc-slider-tooltip,
 .rc-slider-tooltip-content,
-.rc-slider-tooltip-inner {
+.rc-slider-tooltip-inner,
+.rc-slider-tooltip-arrow,
+.rc-slider-tooltip * {
     display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
 }
 
 .kpi-click-target {
